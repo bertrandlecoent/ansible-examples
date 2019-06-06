@@ -1,5 +1,5 @@
 ---
-- hosts: centos
+- hosts: all
   tasks: 
    - name:  print stdout
      command: echo " Hello there"
@@ -7,5 +7,3 @@
    - debug: msg="stdout={{ hello.stdout }}"
    - debug: msg="stderr={{ hello.stderr }}"
    - debug: msg="System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"  
-
-
